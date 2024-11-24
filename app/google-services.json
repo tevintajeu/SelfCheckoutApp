@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1062489957703",
+    "project_id": "self-checkout-app-20b8c",
+    "storage_bucket": "self-checkout-app-20b8c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062489957703:android:a52ebe6696b032e08e9862",
+        "android_client_info": {
+          "package_name": "com.example.selfcheckoutapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEpYyUktd0fGeRmavuShVOJ0zQWFmZ8rI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

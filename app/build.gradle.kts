@@ -18,26 +18,27 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // Access properties from gradle.properties or command-line arguments
+        val consumerKey = project.findProperty("CONSUMER_KEY") as String? ?: ""
+        val consumerSecret = project.findProperty("CONSUMER_SECRET") as String? ?: ""
+        val passkey = project.findProperty("PASSKEY") as String? ?: ""
+
+        buildConfigField("String", "CONSUMER_KEY", "\"$consumerKey\"")
+        buildConfigField("String", "CONSUMER_SECRET", "\"$consumerSecret\"")
+        buildConfigField("String", "PASSKEY", "\"$passkey\"")
     }
 
     buildTypes {
-        val consumerKey = providers.gradleProperty("CONSUMER_KEY").get()
-        val consumerSecret = providers.gradleProperty("CONSUMER_SECRET").get()
-        val passkey = providers.gradleProperty("PASSKEY").get()
         release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            buildConfigField("String", "CONSUMER_KEY", "\"$consumerKey\"")
-            buildConfigField("String", "CONSUMER_SECRET", "\"$consumerSecret\"")
-            buildConfigField("String", "PASSKEY", "\"$passkey\"")
         }
         debug {
-            buildConfigField("String", "CONSUMER_KEY", "\"$consumerKey\"")
-            buildConfigField("String", "CONSUMER_SECRET", "\"$consumerSecret\"")
-            buildConfigField("String", "PASSKEY", "\"$passkey\"")
+            // Additional debug-specific configurations can go here
         }
     }
     compileOptions {

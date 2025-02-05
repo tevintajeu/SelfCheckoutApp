@@ -8,13 +8,14 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.selfcheckout.BuildConfig
 import com.example.selfcheckout.R
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.text.SimpleDateFormat
 import java.util.*
+import com.example.selfcheckout.BuildConfig
+
 
 class PaymentActivity : AppCompatActivity() {
 
@@ -119,7 +120,7 @@ class PaymentActivity : AppCompatActivity() {
             PartyA = phoneNumber,
             PartyB = shortCode,
             PhoneNumber = phoneNumber,
-            CallBackURL = "https://webhook.site/your-unique-id", // Replace with actual callback URL
+            CallBackURL = "https://webhook.site/e506c571-92e9-49d2-969b-3872073246a1", // Replace with actual callback URL
             AccountReference = "SelfCheckout",
             TransactionDesc = "Payment for goods"
         )
